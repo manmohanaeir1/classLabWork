@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onCLickEventWithForm</title>
+</head>
+
+<body>
+    <h1>onCLickEventWithForm</h1>
+    <p id="demo"></p>
+
+    <form action="">
+        <input type="text" id="fname" name="fname">
+        <input type="text" id="lname" name="lname">
+        <input type="text" id="age" name="age">
+        <input type="button" value="Click Me" onclick="myFunction()">
+    </form>
+    <script>
+        function myFunction() {
+            const person = {
+                fname: document.getElementById("fname").value,
+                lname: document.getElementById("lname").value,
+                age: document.getElementById("age").value
+            };
+
+            let text = " ";
+            for (let x in person) {
+                text += person[x] + " ";
+            }
+
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+
+</body>
+
+</html>
